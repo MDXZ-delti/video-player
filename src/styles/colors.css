@@ -13,6 +13,18 @@
 	--surface-shadow-light: var(--hue) 10% 20%;
 	--shadow-strength-light: 2%;
 
+	@media (prefers-color-scheme: light) {
+		--main-color: var(--light);
+		--text1: var(--text1-light);
+		--text2: var(--text2-light);
+		--surface1: var(--surface1-light);
+		--surface2: var(--surface2-light);
+		--surface3: var(--surface3-light);
+		--surface4: var(--surface4-light);
+		--surface-shadow: var(--surface-shadow-light);
+		--shadow-strength: var(--shadow-strength-light);
+	}
+
 	/* Dark theme */
 	--dark: hsl(var(--hue) calc(var(--saturation) / 2) calc(var(--lightness) / 1.5));
 
@@ -27,25 +39,7 @@
 	--surface-shadow-dark: var(--hue) 50% 3%;
 	--shadow-strength-dark: 80%;
 
-	accent-color: var(--main-color);
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--main-color: var(--light);
-		--text1: var(--text1-light);
-		--text2: var(--text2-light);
-		--surface1: var(--surface1-light);
-		--surface2: var(--surface2-light);
-		--surface3: var(--surface3-light);
-		--surface4: var(--surface4-light);
-		--surface-shadow: var(--surface-shadow-light);
-		--shadow-strength: var(--shadow-strength-light);
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
+	@media (prefers-color-scheme: dark) {
 		--main-color: var(--dark);
 		--text1: var(--text1-dark);
 		--text2: var(--text2-dark);
@@ -56,4 +50,6 @@
 		--surface-shadow: var(--surface-shadow-dark);
 		--shadow-strength: var(--shadow-strength-dark);
 	}
+
+	accent-color: var(--main-color);
 }

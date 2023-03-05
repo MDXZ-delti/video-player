@@ -21,41 +21,41 @@ button {
 
 input {
     font-family: inherit;
-}
 
-input[type=number] {
-    border: none;
-    background: transparent;
-    color: inherit;
-    font-size: inherit;
-}
+    &[type=number] {
+        border: none;
+        background: transparent;
+        color: inherit;
+        font-size: inherit;
+    }
 
-input[type=range] {
-    font-size: inherit;
-}
+    &[type=range] {
+        font-size: inherit;
 
-input[type=range]::-webkit-slider-runnable-track {
-    cursor: pointer;
-}
+        &::-webkit-slider-runnable-track {
+            cursor: pointer;
+        }
 
-input[type=range]::-webkit-slider-thumb {
-    cursor: grab;
-}
+        &::-webkit-slider-thumb {
+            cursor: grab;
 
-input[type=range]::-webkit-slider-thumb:active {
-    cursor: grabbing;
-}
+            &:active {
+                cursor: grabbing;
+            }
+        }
+    }
 
-input[type=number] {
-    cursor: text;
-}
+    &[type=number] {
+        cursor: text;
 
-input[type=number]::-webkit-inner-spin-button {
-    cursor: pointer;
-}
+        &::-webkit-inner-spin-button {
+            cursor: pointer;
+        }
+    }
 
-input[type=file]::file-selector-button {
-    border: none;
-    border-radius: inherit;
-    font-family: inherit;
+    &[type=file]::file-selector-button {
+        border: none;
+        border-radius: inherit;
+        font-family: inherit;
+    }
 }
